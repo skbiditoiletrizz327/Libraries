@@ -5,7 +5,7 @@ function import(library)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/ZSIOffical/Libraries/main/Libraries/"..library))()
 end
 --[[ Importing it ]]--
-import("Http") -- example
+import("Http")
 --[[ Using Http ]]--
 -- Encode
 local table_to_encode = {"hi","bye","idk"}
