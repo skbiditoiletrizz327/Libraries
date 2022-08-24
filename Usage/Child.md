@@ -4,9 +4,9 @@
 function import(library)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/ZSIOffical/Libraries/main/Libraries/"..library..".lua"))()
 end
--{{Importing}}--
+--{{Importing}}--
 import("Child")
--{{Using}}--
+--{{Using}}--
 --// childAdded
 -- Note: Do not put game. before it just the path so e.g Workspace,ReplicatedStorage
 childAdded("Workspace",function()
