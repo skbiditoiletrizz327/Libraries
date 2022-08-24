@@ -5,7 +5,7 @@ function import(library)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/ZSIOffical/Libraries/main/Libraries/"..library))()
 end
 -- {{Importing}} --
-local import_ = import("Input")
+import("Input")
 -- {{Usage}} --
 --// inputBegan
 -- the key an only be upper case not lower case!
