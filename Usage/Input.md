@@ -2,7 +2,7 @@
 - also pretty easy to use
 ```lua
 function import(library)
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ZSIOffical/Libraries/main/Libraries/"..library))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ZSIOffical/Libraries/main/Libraries/"..library..".lua"))()
 end
 -- {{Importing}} --
 import("Input")
