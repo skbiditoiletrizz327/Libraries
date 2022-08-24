@@ -28,4 +28,8 @@ local url = request("url") -- seems like it's just like lo but you can add other
 ● url.Headers - headers of the request,
 ● url.Cookies - the response cookies
 ]]--
+-- post
+headers =  {}
+post("url",headers)
+-- and the rest is the same
 ```
