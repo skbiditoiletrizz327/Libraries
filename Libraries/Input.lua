@@ -1,14 +1,20 @@
 local UIS = game:GetService("UserInputService")
+local input = {}
 
-
-function inputBegan(key,callback)
+function input:inputBegan(info)
+    info = info  or {}
+    local key = info.Key
+    local callback = info.Callback
     UIS.InputBegan:Connect(function(obj)
         if obj.KeyCode == Enum.KeyCode[key] then 
             pcall(callback) 
         end 
     end)
 end
-function inputEnded(key,callback)
+function input:inputEnded(info)
+    info = info  or {}
+    local key = info.Key
+    local callback = info.Callback
     UIS.InputEnded:Connect(function (obj)
         if obj.KeyCode == Enum.KeyCode[key] then 
             pcall(callback) 
