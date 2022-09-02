@@ -8,6 +8,7 @@ end
 import("Child")
 --{{Using}}--
 -- same thing with childRemoved and Changed (child:childRemoved,child:Changed)
+-- do not do game.ReplicatedStorage
 child:childAdded({Path=ReplicatedStorage,Callback=function ()
     print(part.Name)
 end})
