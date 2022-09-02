@@ -1,25 +1,32 @@
 local HttpService = game:GetService("HttpService")
 local http_request = (syn and syn.request) or (http and http.request) or http_request
-
-function decode(stuff)
-    HttpService:JSONDecode(stuff)
+local Http = {}
+function Http:decode(stuff)
+    local stuff = stuff or {}
+    HttpService:JSONDecode(stuff.Stuff)
 end
-function encode(stuff)
-    HttpService:JSONEncode(stuff)
+function Http:encode(stuff)
+    local stuff = stuff or {}
+    HttpService:JSONEncode(stuff.Stuff)
 end
-function lo(url)
-    loadstring(game:HttpGet(url))()
+function Http:lo(url)
+    local url = url or {}
+    loadstring(game:HttpGet(url.Url))()
 end
-function request(url)
+function Http:request(url)
+    local url = url or {}
     http_request({
-        Url = url,
+        Url = url.Url,
         Method = "GET"
     })
 end
-function post(url,headers)
-        http_request({
-            Url = url,
-            Headers = headers,
-            Method = "POST"
-        })
+function Http:post(info)
+    local info = info or {}
+    local url = info.Url
+    local headers = info.Headers
+    http_request({
+        Url = url,
+        Headers = headers,
+        Method = "POST"
+    })
 end
