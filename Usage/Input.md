@@ -8,14 +8,9 @@ end
 -- {{Importing}} --
 import("Input")
 -- {{Usage}} --
---// inputBegan
 -- the key an only be upper case not lower case!
-inputBegan("Q",function()
-    print("hi")
-end)
---// inputEnded
--- the key an only be upper case not lower case!
-inputEnded("Q",function()
-    print("Bye")
-end)
+--// same with input:inputBegan
+input:inputEnded({Key="Q",Callback=function ()
+    print("idk")
+end})
 ```
