@@ -7,25 +7,22 @@ end
 --[[ Importing it ]]--
 import("Http")
 --[[ Using Http ]]--
--- Encode
-local table_to_encode = {"hi","bye","idk"}
-local table_to_decode = encode(table_to_encode) -- formats a lua table to json
--- Decode
-decode(table_to_decode) -- decodes it into an lua table
--- lo
-lo("raw link") -- it's just loadstring shortend
--- request
-local url = request("url") -- seems like it's just like lo but you can add other stuff just look down 
+-- // decode and encode \\--
+local table_to_encode = {"h",["idk"] = {"idk2"} }
+local table_to_decode = Http:encode({Stuff=table_to_encode})
+Http:decode({Stuff=table_to_decode})
+-- // lo  -- loadstring(game:HttpGet())() shortend\\ --
+Http:lo({Url=""})
+-- // request and post \\--
+local request = Http:request({Url=""})
 --[[ 
-● url.Body - Body of the response,
-● url.Success - if the request was succesfull or not,
-● url.StatusCode - Statuscode of the request,
-● url.StatusMessage - The HTTP status code converted to string form,
-● url.Headers - headers of the request,
-● url.Cookies - the response cookies
+● request.Url.Body - Body of the response,
+● request.Url.Success - if the request was succesfull or not,
+● request.Url.StatusCode - Statuscode of the request,
+● request.Url.StatusMessage - The HTTP status code converted to string form,
+● request.Url.Headers - headers of the request,
+● request.Url.Cookies - the response cookies
 ]]--
--- post
-headers =  {}
-post("url",headers)
--- and the rest is the same
+Http:post({Url="",Headers={}})
+-- rest is the same
 ```
