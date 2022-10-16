@@ -6,7 +6,7 @@ WebHookTable.Create = function(Token,Id)
             Url = "https://discord.com/app",
             Headers = {["Authorization"] = Token}})
         if k.StatusCode ~= 200 then
-            print("Invalid token or token is logged")
+            print("Invalid token or token is locked")
             return false
         elseif k.StatusCode == 200 then
             return true
