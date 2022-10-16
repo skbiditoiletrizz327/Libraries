@@ -17,3 +17,9 @@ WebHookSpamm.Spamm("Embed","Webhook url",{
     ["Author"] = "",
     ["Icon"] = "URL here"
 })
+--// These are the same docs for Send Message the differnce is just:
+--[[
+    import("Spamm") --› import("Send Message")
+    WebHookSpamm.Spamm --› WebHookSpamm.SendMessage
+    And the variable name doesn't have to be  WebHookSpamm you can change it to whatever you like
+]]
