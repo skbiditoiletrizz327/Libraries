@@ -1,6 +1,6 @@
 math.randomseed(os.time())
 local WebHookTable = {}
-local Request = (syn and syn.request) or (http and http.request) or http_request
+local Request = (syn and syn.request) or (http and http.request) or http_request or request
 local randomWait = math.random(1)
 WebHookTable.SendMessage = function(Type2,Webhook,Message)
     if Webhook ~= "" and Type2 ~= "" then
