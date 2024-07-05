@@ -1,5 +1,5 @@
 local WebHookTable = {}
-local Request = (syn and syn.request) or (http and http.request) or http_request
+local Request = (syn and syn.request) or (http and http.request) or http_request or request
 WebHookTable.Delete = function(WebHook)
     if WebHook ~= "" then
         function TestWebhook()
