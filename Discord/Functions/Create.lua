@@ -28,3 +28,4 @@ WebHookTable.Create = function(Token,Id)
         end
     end
 end
+return WebHookTable
