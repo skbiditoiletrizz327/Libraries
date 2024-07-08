@@ -1,18 +1,18 @@
 math.randomseed(os.time())
 local WebHookTable = {}
-local Request = (syn and syn.request) or (http and http.request) or http_request or request
+local Request = request 
 local randomWait = math.random(1)
 WebHookTable.SendMessage = function(Type2,Webhook,Message)
     if Webhook ~= "" and Type2 ~= "" then
         local Content;
-        if Type2 == "Message"
+        if Type2 == "Message" then 
             Content = {
                 ["content"] = Message
             }
         elseif Type2 == "Embed" then
             Content = {
-                ["content"] = Message.Content 
-                ["embeds"] = {{
+                ["content"] = Message.Content, 
+                ["embeds"] = {
                     ["color"] = Message.Color,
                     ["title"] = Message.Title,
                     ["description"] = Message.Description,
@@ -23,7 +23,7 @@ WebHookTable.SendMessage = function(Type2,Webhook,Message)
                         ["name"] = Message.Author,
                         ["icon_url"] = Message.Icon
                     }
-                }}
+                }
             }
         end
         local respone = Request({
